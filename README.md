@@ -1,12 +1,19 @@
 # 🌸 Zenkei
 
-**A private, AI-powered personal finance dashboard that runs entirely in your browser.**
+**A free, open-source take on Rocket Money that runs entirely in your browser.**
 
-Zenkei is a free, self-contained alternative to apps like Rocket Money. It tracks your spending, finds your recurring subscriptions, plans your budgets, projects your cash flow, and coaches you on your money — with **no bank connection, no login, and no server**. Everything happens on your device, and nothing is ever uploaded.
+Zenkei is a Rocket Money-style personal finance dashboard, rebuilt from scratch as a portfolio project. It recreates the core of Rocket Money (spending tracking, subscription detection, budgets, and net worth) and reimagines it to be completely private, with **no bank connection, no login, and no server**. It also adds an AI coach that explains your money in plain words. Everything runs on your device, and nothing is ever uploaded.
 
-> Live demo: **[zenkei.org](https://zenkei.org)**
+> Live demo: **[zenkei.io](https://zenkei.io)**
 
 ---
+
+## Screenshots
+
+<!-- Add a screenshot named screenshot.png to the repo root, then uncomment the line below. A screenshot or GIF is the single biggest thing that makes a repo look good. -->
+<!-- ![Zenkei dashboard](./screenshot.png) -->
+
+_Drop a `screenshot.png` in the repo root and uncomment the image line above._
 
 ## Features
 
@@ -55,6 +62,8 @@ Because it's a single static file, it deploys anywhere: Netlify, Cloudflare Page
 ## Disclaimer
 
 Zenkei is a personal project and a portfolio demo, not financial advice. It ships with realistic sample data so you can explore it immediately.
+
+Rocket Money is a trademark of its respective owner. Zenkei is an independent, open-source project and is **not affiliated with, endorsed by, or sponsored by** Rocket Money or Rocket Companies. Any reference to Rocket Money is for descriptive comparison only.
 
 ## License
 
