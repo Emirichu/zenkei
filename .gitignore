@@ -1,0 +1,11 @@
+# Dependencies (not needed — this is a single static file)
+node_modules/
+package.json
+package-lock.json
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
