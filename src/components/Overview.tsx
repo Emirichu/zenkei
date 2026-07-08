@@ -30,7 +30,7 @@ export default function Overview({
       <p style={{ color: "var(--muted)", margin: "0 0 22px", fontSize: 14.5 }}>
         Here's your money for {a.cur ? monthLabel(a.cur) : "this month"}.
       </p>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14, marginBottom: 16 }}>
+      <div className="g4" style={{ gap: 14, marginBottom: 16 }}>
         <Kpi
           label="Net this month"
           value={fmtSignedUSD(net).replace(".00", "")}
@@ -45,7 +45,7 @@ export default function Overview({
           sub={<span style={{ color: "var(--warn)" }}>{subs.filter((s) => s.suggestCancel).length} to review</span>}
         />
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1.55fr 1fr", gap: 16, marginBottom: 16 }}>
+      <div className="g-hero" style={{ gap: 16, marginBottom: 16 }}>
         <Card>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 8 }}>
             <div>
@@ -57,7 +57,7 @@ export default function Overview({
         </Card>
         <Card>
           <Eyebrow style={{ marginBottom: 10 }}>By category · this month</Eyebrow>
-          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          <div className="donut-row">
             <Donut data={catData} centerValue={fmtUSD(a.curSpend)} centerLabel="spent" />
             <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 7, minWidth: 0 }}>
               {catData.slice(0, 6).map((d) => (
@@ -83,7 +83,7 @@ export default function Overview({
           </div>
         </Card>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+      <div className="g2" style={{ gap: 16 }}>
         <Card>
           <Eyebrow style={{ marginBottom: 14 }}>Top merchants</Eyebrow>
           {(() => {

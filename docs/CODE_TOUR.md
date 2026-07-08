@@ -77,6 +77,8 @@ The `Importer` is the busiest: it wires the textarea/file/screenshot inputs into
 
 All styling is inline `style` objects plus one small [`index.css`](../src/index.css) that defines the palette as CSS variables (`--bg`, `--accent`, `--good`…), the two animations (`fade-in`, `grow`), and the typography: Shippori Mincho for headings, Inter for body text, IBM Plex Mono for numbers and labels.
 
+Layout is the exception to "everything inline": the app shell (`.app`, `.sidebar`, `.main`) and the grid helpers (`.g2`, `.g3`, `.g4`, `.g-hero`, `.g-coach`, `.g-import`, `.donut-row`, `.subs-grid`) live in `index.css` so one media query (`max-width: 860px`) can restack them for phones — the sidebar turns into a top bar with horizontally scrollable tabs, multi-column grids collapse to one column, and the subscriptions table scrolls sideways inside `.table-scroll`.
+
 ## How to extend it
 
 - **Add a category**: add a color in `CATS` and keywords in `RULES` (`categories.ts`), plus a default limit in `DEFAULT_BUDGETS` (`demoData.ts`).

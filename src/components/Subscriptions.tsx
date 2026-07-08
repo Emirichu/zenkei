@@ -18,7 +18,7 @@ export default function Subscriptions({ subs }: { subs: Subscription[] }) {
       <p style={{ color: "var(--muted)", margin: "0 0 22px", fontSize: 14.5 }}>
         We scanned your transactions for anything that repeats on a schedule.
       </p>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14, marginBottom: 18 }}>
+      <div className="g4" style={{ gap: 14, marginBottom: 18 }}>
         <Kpi label="Detected subscriptions" value={subs.length} />
         <Kpi
           label="Total per month"
@@ -45,14 +45,9 @@ export default function Subscriptions({ subs }: { subs: Subscription[] }) {
         </Card>
       )}
       <Card style={{ padding: 0, overflow: "hidden" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "2fr 1fr 1fr 1.4fr 90px",
-            padding: "12px 20px",
-            borderBottom: "1px solid var(--line)",
-          }}
-        >
+        <div className="table-scroll">
+        <div className="table-min">
+        <div className="subs-grid" style={{ padding: "12px 20px", borderBottom: "1px solid var(--line)" }}>
           {["Service", "Cadence", "Amount", "Status", "Action"].map((h, i) => (
             <div key={i} className="eyebrow" style={{ fontSize: 9.5 }}>
               {h}
@@ -62,9 +57,8 @@ export default function Subscriptions({ subs }: { subs: Subscription[] }) {
         {subs.map((s) => (
           <div
             key={s.key}
+            className="subs-grid"
             style={{
-              display: "grid",
-              gridTemplateColumns: "2fr 1fr 1fr 1.4fr 90px",
               alignItems: "center",
               padding: "13px 20px",
               borderBottom: "1px solid var(--line)",
@@ -152,6 +146,8 @@ export default function Subscriptions({ subs }: { subs: Subscription[] }) {
             </div>
           </div>
         ))}
+        </div>
+        </div>
       </Card>
       <div style={{ fontSize: 11.5, color: "var(--muted2)", marginTop: 12 }}>
         Detection groups similar merchant names and looks for consistent timing and amounts. "Cancel" is a local simulation —

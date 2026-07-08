@@ -78,7 +78,7 @@ export default function Coach({
       <p style={{ color: "var(--muted)", margin: "0 0 22px", fontSize: 14.5 }}>
         Insights from your {a.cur ? monthLabel(a.cur) : "recent"} activity — worked out right here on your device.
       </p>
-      <div style={{ display: "grid", gridTemplateColumns: "280px 1fr", gap: 16, marginBottom: 18 }}>
+      <div className="g-coach" style={{ gap: 16, marginBottom: 18 }}>
         <Card style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
           <Eyebrow style={{ marginBottom: 8 }}>Money health</Eyebrow>
           <ScoreRing score={score} color={bandColor} />
@@ -107,7 +107,7 @@ export default function Coach({
         </Card>
       </div>
       <Eyebrow style={{ marginBottom: 10 }}>What stands out</Eyebrow>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 20 }}>
+      <div className="g2" style={{ gap: 12, marginBottom: 20 }}>
         {insights.map((it, i) => (
           <div
             key={i}

@@ -117,11 +117,11 @@ export default function Importer({
         Drop in a CSV export or messy copied statement text. It's parsed and categorized right here in your browser —
         nothing is uploaded.
       </p>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+      <div className="g-import" style={{ gap: 16 }}>
         <Card>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10, flexWrap: "wrap", gap: 8 }}>
             <Eyebrow>Your transactions</Eyebrow>
-            <div style={{ display: "flex", gap: 8 }}>
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
               <button onClick={() => setText(SAMPLE_TEXT)} style={btnGhost}>
                 Try sample
               </button>

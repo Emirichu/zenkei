@@ -54,7 +54,7 @@ export default function Plan({
       <p style={{ color: "var(--muted)", margin: "0 0 22px", fontSize: 14.5 }}>
         What's safe to spend, your goals, and where your cash is heading.
       </p>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
+      <div className="g2" style={{ gap: 16, marginBottom: 16 }}>
         <Card style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <Eyebrow style={{ marginBottom: 10 }}>Safe to spend</Eyebrow>
           <div
@@ -137,7 +137,7 @@ export default function Plan({
         <Eyebrow>Savings goals</Eyebrow>
         <span style={{ fontSize: 12, color: "var(--muted2)" }}>at {fmtUSD(monthlySave)}/mo saved</span>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 16 }}>
+      <div className="g2" style={{ gap: 12, marginBottom: 16 }}>
         {goals.map((g) => {
           const pct = Math.min((g.saved / g.target) * 100, 100);
           const done = g.saved >= g.target;

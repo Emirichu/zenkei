@@ -89,20 +89,8 @@ export default function Sidebar({
   onReset: () => void;
 }) {
   return (
-    <aside
-      style={{
-        width: 238,
-        borderRight: "1px solid var(--line)",
-        padding: "22px 16px",
-        position: "sticky",
-        top: 0,
-        height: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        background: "var(--bg2)",
-      }}
-    >
-      <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "4px 8px 22px" }}>
+    <aside className="sidebar">
+      <div className="side-logo">
         <div
           style={{
             width: 34,
@@ -126,7 +114,7 @@ export default function Sidebar({
           </div>
         </div>
       </div>
-      <nav style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+      <nav className="side-nav">
         {NAV.map((n) => (
           <button
             key={n.id}
@@ -153,8 +141,8 @@ export default function Sidebar({
           </button>
         ))}
       </nav>
-      <div style={{ marginTop: "auto", padding: "14px 12px 4px" }}>
-        <div style={{ opacity: 0.75, margin: "0 -4px 12px" }}>
+      <div className="side-bottom">
+        <div className="side-art">
           <SakuraScene />
         </div>
         <div style={{ padding: 12, borderRadius: 10, background: "var(--panel)", border: "1px solid var(--line)" }}>

@@ -24,7 +24,7 @@ export default function Budgets({
       <p style={{ color: "var(--muted)", margin: "0 0 22px", fontSize: 14.5 }}>
         {monthLabel(a.cur)} · click any number to adjust your limit.
       </p>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 14, marginBottom: 18 }}>
+      <div className="g3" style={{ gap: 14, marginBottom: 18 }}>
         <Kpi label="Total budget" value={fmtUSD(totalBudget)} />
         <Kpi label="Spent so far" value={fmtUSD(totalSpent)} accent={totalSpent <= totalBudget} />
         <Kpi

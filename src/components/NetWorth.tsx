@@ -27,14 +27,14 @@ export default function NetWorth() {
       <p style={{ color: "var(--muted)", margin: "0 0 22px", fontSize: 14.5 }}>
         Assets minus liabilities · <Delta value={change} /> over 7 months
       </p>
-      <div style={{ display: "grid", gridTemplateColumns: "1.55fr 1fr", gap: 16, marginBottom: 16 }}>
+      <div className="g-hero" style={{ gap: 16, marginBottom: 16 }}>
         <Card>
           <Eyebrow style={{ marginBottom: 8 }}>Net worth trend</Eyebrow>
           <AreaChart points={trend} color="#4E6E96" />
         </Card>
         <Card>
           <Eyebrow style={{ marginBottom: 10 }}>Asset allocation</Eyebrow>
-          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          <div className="donut-row">
             <Donut data={donutData} centerValue={fmtUSD(totalA)} centerLabel="assets" />
             <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8 }}>
               {donutData.map((d) => (
@@ -50,7 +50,7 @@ export default function NetWorth() {
           </div>
         </Card>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+      <div className="g2" style={{ gap: 16 }}>
         <Card>
           <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 12 }}>
             <Eyebrow>Assets</Eyebrow>

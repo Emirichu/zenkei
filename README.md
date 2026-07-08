@@ -40,6 +40,8 @@ Subscription trackers and budgeting apps all want the same thing first: your ban
 
 Everything auto-saves to your browser's local storage: imported transactions, budget limits, and goals survive a refresh. With no input at all, Zenkei ships with six months of realistic, deterministic demo data so the dashboard looks alive the moment it loads.
 
+The layout is responsive: on phones the sidebar becomes a top bar with swipeable tabs, cards stack into a single column, and wide tables scroll sideways inside their card.
+
 ## How the subscription detector works
 
 No merchant database, no hardcoded list — just the shape of the data ([src/lib/subscriptions.ts](src/lib/subscriptions.ts)):

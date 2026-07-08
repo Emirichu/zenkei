@@ -41,7 +41,7 @@ export default function App() {
     setGoals(DEFAULT_GOALS);
   };
   return (
-    <div style={{ display: "flex", minHeight: "100vh", background: "var(--bg)" }}>
+    <div className="app">
       <Sidebar
         nav={nav}
         setNav={setNav}
@@ -50,7 +50,7 @@ export default function App() {
         onBackToDemo={() => setImported(null)}
         onReset={resetAll}
       />
-      <main style={{ flex: 1, minWidth: 0, padding: "28px 34px 60px", maxWidth: 1180, margin: "0 auto", width: "100%" }}>
+      <main className="main">
         {nav === "overview" && <Overview analytics={analytics} txns={txns} subs={subs} />}
         {nav === "subscriptions" && <Subscriptions subs={subs} />}
         {nav === "budgets" && <Budgets analytics={analytics} budgets={budgets} setBudgets={setBudgets} />}
