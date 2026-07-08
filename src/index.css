@@ -1,0 +1,32 @@
+:root{
+  --bg:#F6EBEE; --bg2:#FBF3F5; --panel:#FFFCFD; --panel2:#F6EEF1;
+  --line:#EEDFE4; --line2:#E4D0D7;
+  --text:#312B33; --muted:#7C7079; --muted2:#A89AA1;
+  --accent:#D96A8A; --accent-soft:#F7E1E8;
+  --danger:#D25C63; --warn:#C9924A; --good:#5E9E86;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:linear-gradient(180deg,#F8EAEF 0%, #F1EBF1 52%, #E9EDF4 100%);
+  background-attachment:fixed;
+  color:var(--text);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+h1{font-family:'Shippori Mincho','Fraunces',Georgia,serif;font-weight:600;letter-spacing:.005em;}
+.mono{font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted2);}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:#E4D0D7;border-radius:8px;border:2px solid var(--bg)}
+::-webkit-scrollbar-track{background:transparent}
+button{font-family:inherit;cursor:pointer}
+input,textarea,select{font-family:inherit}
+a{color:inherit}
+.fade-in{animation:fade .5s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.grow{animation:grow .7s cubic-bezier(.2,.8,.2,1) both}
+@keyframes grow{from{transform:scaleY(0);opacity:0}to{transform:scaleY(1);opacity:1}}
+.card{transition:transform .2s cubic-bezier(.2,.8,.2,1), box-shadow .2s ease;}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -16px rgba(150,70,95,0.24), 0 3px 10px rgba(150,70,95,0.07);}
