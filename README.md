@@ -24,9 +24,8 @@ Zenkei is the result. It does the core of what a paid subscription tracker does,
 
 ## Screenshots
 
-<!-- After deploying, drop a screenshot into docs/ and update the path below. -->
 <p align="center">
-  <img src="docs/screenshot-overview.png" alt="Zenkei overview tab (screenshot coming soon)" width="90%" />
+  <img src="docs/screenshot-overview.png" alt="The Zenkei overview tab: monthly KPIs, spending over time, and the category donut" width="90%" />
 </p>
 
 ## What you get
