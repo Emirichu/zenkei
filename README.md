@@ -14,7 +14,7 @@
 
 **Zenkei is a free, open source alternative to Rocket Money that runs entirely in your browser.** It finds your subscriptions, tracks your spending, watches your budgets, and coaches you on your money. There is no bank login, no account, no subscription fee, and no server. Your data never leaves your device.
 
-> Try it live: **[zenkei.io](https://zenkei.io)**
+> Try it live: **[emirichu.github.io/zenkei](https://emirichu.github.io/zenkei/)** (also at [zenkei.vercel.app](https://zenkei.vercel.app))
 
 ## Why I built this
 
