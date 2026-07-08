@@ -10,6 +10,3 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
-
-# Local tooling
-.claude/
