@@ -84,7 +84,7 @@ export default function Importer({
         setWarnings(warnings);
       }
     } catch (e) {
-      setErr(String((e as Error).message || e) + " — falling back to built-in parser.");
+      setErr(String((e as Error).message || e) + ". Falling back to built-in parser.");
       const { rows, warnings } = parseTransactions(text);
       setResult(rows);
       setWarnings(warnings);
@@ -111,11 +111,11 @@ export default function Importer({
   }, [result]);
   return (
     <div>
-      <Eyebrow>07 — Import Your Data</Eyebrow>
+      <Eyebrow>07 · Import Your Data</Eyebrow>
       <h1 style={{ fontSize: 29, margin: "6px 0 2px", letterSpacing: "-.01em" }}>Paste anything. Get clean data.</h1>
       <p style={{ color: "var(--muted)", margin: "0 0 22px", fontSize: 14.5 }}>
-        Drop in a CSV export or messy copied statement text. It's parsed and categorized right here in your browser —
-        nothing is uploaded.
+        Drop in a CSV export or messy copied statement text. It's parsed and categorized right here in your browser.
+        Nothing is uploaded.
       </p>
       <div className="g-import" style={{ gap: 16 }}>
         <Card>
@@ -157,7 +157,7 @@ export default function Importer({
             <label style={{ display: "flex", alignItems: "center", gap: 9, fontSize: 12.5, cursor: "pointer" }}>
               <input type="checkbox" checked={useLLM} onChange={(e) => setUseLLM(e.target.checked)} />
               <span>
-                Use a real LLM (optional) <span style={{ color: "var(--muted2)" }}>— paste an OpenAI key</span>
+                Use a real LLM (optional) <span style={{ color: "var(--muted2)" }}>· paste an OpenAI key</span>
               </span>
             </label>
             {useLLM && (

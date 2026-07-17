@@ -22,7 +22,7 @@ export default function NetWorth() {
   const donutData = Object.entries(kinds).map(([k, v]) => ({ label: k, value: v, color: kindColors[k] || "#A89AA1" }));
   return (
     <div>
-      <Eyebrow>04 — Net Worth</Eyebrow>
+      <Eyebrow>04 · Net Worth</Eyebrow>
       <h1 style={{ fontSize: 29, margin: "6px 0 2px", letterSpacing: "-.01em" }}>{fmtUSD(net)}</h1>
       <p style={{ color: "var(--muted)", margin: "0 0 22px", fontSize: 14.5 }}>
         Assets minus liabilities · <Delta value={change} /> over 7 months

@@ -14,7 +14,7 @@ export function generateInsights(a: Analytics, subs: Subscription[], budgets: Bu
   if (sr >= 20)
     out.push({
       tone: "good",
-      title: `Strong savings rate — ${sr.toFixed(0)}%`,
+      title: `Strong savings rate: ${sr.toFixed(0)}%`,
       body: `You kept ${fmtUSD(net)} of your ${fmtUSD(a.curIncome)} income this month, comfortably above the 20% rule of thumb.`,
     });
   else if (sr >= 0)
@@ -74,7 +74,7 @@ export function generateInsights(a: Analytics, subs: Subscription[], budgets: Bu
     out.push({
       tone: "warn",
       title: `${flagged.length} subscriptions worth a look`,
-      body: `You spend ${fmtUSD(subTotal)}/mo across ${subs.length} recurring services. Cancelling the flagged ones frees up ${fmtUSD(save)}/mo — around ${fmtUSD(save * 12)} a year.`,
+      body: `You spend ${fmtUSD(subTotal)}/mo across ${subs.length} recurring services. Cancelling the flagged ones frees up ${fmtUSD(save)}/mo, around ${fmtUSD(save * 12)} a year.`,
     });
   else if (subs.length)
     out.push({
@@ -88,7 +88,7 @@ export function generateInsights(a: Analytics, subs: Subscription[], budgets: Bu
     out.push({
       tone: "info",
       title: `${tc} leads your spending`,
-      body: `${fmtUSD(tv)} this month — ${((tv / a.curSpend) * 100).toFixed(0)}% of everything you spent.`,
+      body: `${fmtUSD(tv)} this month, ${((tv / a.curSpend) * 100).toFixed(0)}% of everything you spent.`,
     });
   }
   const disc = (a.curCats.Dining || 0) + (a.curCats.Entertainment || 0) + (a.curCats.Shopping || 0);
@@ -96,7 +96,7 @@ export function generateInsights(a: Analytics, subs: Subscription[], budgets: Bu
     out.push({
       tone: "warn",
       title: `Discretionary spending is ${((disc / a.curSpend) * 100).toFixed(0)}%`,
-      body: `Dining, shopping and entertainment came to ${fmtUSD(disc)} — usually the easiest place to trim.`,
+      body: `Dining, shopping and entertainment came to ${fmtUSD(disc)}, usually the easiest place to trim.`,
     });
   return out;
 }
@@ -152,14 +152,14 @@ export function answerQuery(text: string, a: Analytics, subs: Subscription[], _t
   if (/savings rate|how much.*save|do i save/.test(q)) {
     const net = a.curIncome - a.curSpend;
     const sr = a.curIncome ? (net / a.curIncome) * 100 : 0;
-    return `Your savings rate in ${monthLabel(a.cur)} was ${sr.toFixed(0)}% — you kept ${fmtUSD(net)} of ${fmtUSD(a.curIncome)} income.`;
+    return `Your savings rate in ${monthLabel(a.cur)} was ${sr.toFixed(0)}%. You kept ${fmtUSD(net)} of ${fmtUSD(a.curIncome)} income.`;
   }
   if (/income|earn|make|salary|paid|paycheck/.test(q))
     return `You brought in ${fmtUSD(a.curIncome)} in ${monthLabel(a.cur)}, averaging ${fmtUSD(a.avgIncome)}/mo.`;
   if (/net worth|networth/.test(q)) {
     const A = DEMO_ACCOUNTS.filter((x) => x.type === "asset").reduce((s, x) => s + x.value, 0);
     const L = DEMO_ACCOUNTS.filter((x) => x.type === "liability").reduce((s, x) => s + x.value, 0);
-    return `Your net worth is ${fmtUSD(A + L)} — ${fmtUSD(A)} in assets minus ${fmtUSD(-L)} in liabilities.`;
+    return `Your net worth is ${fmtUSD(A + L)}: ${fmtUSD(A)} in assets minus ${fmtUSD(-L)} in liabilities.`;
   }
   if (/biggest|most|top|largest|highest/.test(q)) {
     if (/merchant|store|place|where/.test(q)) {
@@ -167,7 +167,7 @@ export function answerQuery(text: string, a: Analytics, subs: Subscription[], _t
       if (top) return `Your top merchant is ${top[0]} at ${fmtUSD(top[1])} over the last ${a.monthKeys.length} months.`;
     }
     const c = Object.entries(a.curCats).sort((x, y) => y[1] - x[1])[0];
-    if (c) return `Your biggest category in ${monthLabel(a.cur)} is ${c[0]} at ${fmtUSD(c[1])} — ${((c[1] / a.curSpend) * 100).toFixed(0)}% of spending.`;
+    if (c) return `Your biggest category in ${monthLabel(a.cur)} is ${c[0]} at ${fmtUSD(c[1])}, ${((c[1] / a.curSpend) * 100).toFixed(0)}% of spending.`;
   }
   if (a.merchantSpend) {
     const m = Object.keys(a.merchantSpend).find((name) => name.length > 3 && q.includes(name.toLowerCase().split(" ")[0]));

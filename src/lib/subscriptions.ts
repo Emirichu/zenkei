@@ -113,7 +113,7 @@ export function detectSubscriptions(txns: Transaction[]): Subscription[] {
     if (s.monthly >= 45 && s.category === "Subscriptions")
       flags.push({
         t: "High cost",
-        why: `${fmtUSD(s.monthly, 2)}/mo — one of your priciest`,
+        why: `${fmtUSD(s.monthly, 2)}/mo, one of your priciest`,
       });
     s.flags = flags;
     s.suggestCancel = flags.length > 0;

@@ -49,7 +49,7 @@ export default function Plan({
   ];
   return (
     <div>
-      <Eyebrow>05 — Plan</Eyebrow>
+      <Eyebrow>05 · Plan</Eyebrow>
       <h1 style={{ fontSize: 29, margin: "6px 0 2px", letterSpacing: "-.01em" }}>Plan ahead.</h1>
       <p style={{ color: "var(--muted)", margin: "0 0 22px", fontSize: 14.5 }}>
         What's safe to spend, your goals, and where your cash is heading.

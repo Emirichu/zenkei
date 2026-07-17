@@ -73,10 +73,10 @@ export default function Coach({
   };
   return (
     <div>
-      <Eyebrow>06 — AI Coach</Eyebrow>
+      <Eyebrow>06 · AI Coach</Eyebrow>
       <h1 style={{ fontSize: 29, margin: "6px 0 2px", letterSpacing: "-.01em" }}>Your money, in plain words.</h1>
       <p style={{ color: "var(--muted)", margin: "0 0 22px", fontSize: 14.5 }}>
-        Insights from your {a.cur ? monthLabel(a.cur) : "recent"} activity — worked out right here on your device.
+        Insights from your {a.cur ? monthLabel(a.cur) : "recent"} activity, worked out right here on your device.
       </p>
       <div className="g-coach" style={{ gap: 16, marginBottom: 18 }}>
         <Card style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center" }}>
@@ -90,7 +90,7 @@ export default function Coach({
             You earned <b>{fmtUSD(a.curIncome)}</b> and spent <b>{fmtUSD(a.curSpend)}</b>,{" "}
             {net >= 0 ? (
               <span>
-                keeping <b style={{ color: "var(--good)" }}>{fmtUSD(net)}</b> — a {sr.toFixed(0)}% savings rate.
+                keeping <b style={{ color: "var(--good)" }}>{fmtUSD(net)}</b>, a {sr.toFixed(0)}% savings rate.
               </span>
             ) : (
               <span>

@@ -112,8 +112,8 @@ export function generateDemoData(): Transaction[] {
 export const DEMO_ACCOUNTS: Account[] = [
   { name: "Everyday Checking", type: "asset", kind: "Cash", value: 8420 },
   { name: "High-Yield Savings", type: "asset", kind: "Cash", value: 22500 },
-  { name: "401(k) — Fidelity", type: "asset", kind: "Investments", value: 64280 },
-  { name: "Brokerage — Schwab", type: "asset", kind: "Investments", value: 18940 },
+  { name: "401(k) · Fidelity", type: "asset", kind: "Investments", value: 64280 },
+  { name: "Brokerage · Schwab", type: "asset", kind: "Investments", value: 18940 },
   { name: "Roth IRA", type: "asset", kind: "Investments", value: 12310 },
   { name: "2019 Honda (est.)", type: "asset", kind: "Property", value: 14000 },
   { name: "Chase Sapphire", type: "liability", kind: "Credit Card", value: -3450 },

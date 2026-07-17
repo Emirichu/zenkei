@@ -25,7 +25,7 @@ export default function Overview({
   const recent = txns.slice(0, 8);
   return (
     <div>
-      <Eyebrow>01 — Overview</Eyebrow>
+      <Eyebrow>01 · Overview</Eyebrow>
       <h1 style={{ fontSize: 29, margin: "6px 0 2px", letterSpacing: "-.01em" }}>Good to see you.</h1>
       <p style={{ color: "var(--muted)", margin: "0 0 22px", fontSize: 14.5 }}>
         Here's your money for {a.cur ? monthLabel(a.cur) : "this month"}.

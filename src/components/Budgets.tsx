@@ -19,7 +19,7 @@ export default function Budgets({
   const totalSpent = cats.reduce((s, c) => s + (a.curCats[c] || 0), 0);
   return (
     <div>
-      <Eyebrow>03 — Budgets</Eyebrow>
+      <Eyebrow>03 · Budgets</Eyebrow>
       <h1 style={{ fontSize: 29, margin: "6px 0 2px", letterSpacing: "-.01em" }}>Spend vs budget.</h1>
       <p style={{ color: "var(--muted)", margin: "0 0 22px", fontSize: 14.5 }}>
         {monthLabel(a.cur)} · click any number to adjust your limit.

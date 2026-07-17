@@ -72,7 +72,7 @@ export default function App() {
           }}
         >
           <div className="eyebrow" style={{ fontSize: 10 }}>
-            Zenkei — private personal finance
+            Zenkei · private personal finance
           </div>
           <div style={{ fontSize: 11.5, color: "var(--muted2)" }}>No accounts linked · No login · Nothing leaves this browser</div>
         </footer>

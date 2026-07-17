@@ -13,7 +13,7 @@ export default function Subscriptions({ subs }: { subs: Subscription[] }) {
   const toggle = (k: string) => setCancelled((c) => ({ ...c, [k]: !c[k] }));
   return (
     <div>
-      <Eyebrow>02 — Subscription Detector</Eyebrow>
+      <Eyebrow>02 · Subscription Detector</Eyebrow>
       <h1 style={{ fontSize: 29, margin: "6px 0 2px", letterSpacing: "-.01em" }}>Recurring charges, found automatically.</h1>
       <p style={{ color: "var(--muted)", margin: "0 0 22px", fontSize: 14.5 }}>
         We scanned your transactions for anything that repeats on a schedule.
@@ -150,8 +150,8 @@ export default function Subscriptions({ subs }: { subs: Subscription[] }) {
         </div>
       </Card>
       <div style={{ fontSize: 11.5, color: "var(--muted2)", marginTop: 12 }}>
-        Detection groups similar merchant names and looks for consistent timing and amounts. "Cancel" is a local simulation —
-        it just updates your projected total here.
+        Detection groups similar merchant names and looks for consistent timing and amounts. "Cancel" is a local simulation.
+        It just updates your projected total here.
       </div>
     </div>
   );
