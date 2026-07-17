@@ -86,7 +86,7 @@ npm run build    # type-checks and builds to dist/
 npm run preview  # serves the production build
 ```
 
-Built with React 18, Vite, and TypeScript. There is no chart library. The donut, the area chart, and the score ring are hand-built SVG components in [src/components/charts](src/components/charts). New to the codebase? Start with [docs/CODE_TOUR.md](docs/CODE_TOUR.md).
+Built with React 18, Vite, and TypeScript. There is no chart library. The donut, the area chart, and the score ring are hand-built SVG components in [src/components/charts](src/components/charts). New to the codebase? Start with [docs/CODE_TOUR.md](docs/CODE_TOUR.md). And if you think in Python like I do, [docs/TS_NOTES.md](docs/TS_NOTES.md) maps every TypeScript idea in this repo to its Python equivalent.
 
 ## Deploy your own
 
