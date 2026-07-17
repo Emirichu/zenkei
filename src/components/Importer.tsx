@@ -77,7 +77,7 @@ export default function Importer({
         setResult(rows);
         if (!rows.length) setWarnings(["Model returned no rows."]);
       } else {
-        // A short beat so "Analyzing…" is visible — instant results read as broken.
+        // A short beat so "Analyzing…" is visible. Instant results read as broken.
         await new Promise((r) => setTimeout(r, 450));
         const { rows, warnings } = parseTransactions(text);
         setResult(rows);

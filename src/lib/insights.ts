@@ -101,10 +101,10 @@ export function generateInsights(a: Analytics, subs: Subscription[], budgets: Bu
   return out;
 }
 
-/** 0–100 money-health score. Starts at 50, then: savings rate moves it
+/** 0-100 money-health score. Starts at 50, then: savings rate moves it
  * up to ±30, staying inside total budget +12 (overage scales down to
  * −18), flagged-subscription waste up to −12, and the month-over-month
- * spending trend ±6. Clamped to 5–99 so it never reads as a grade. */
+ * spending trend ±6. Clamped to 5-99 so it never reads as a grade. */
 export function moneyScore(a: Analytics, subs: Subscription[], budgets: Budgets): number {
   const net = a.curIncome - a.curSpend;
   const sr = a.curIncome ? net / a.curIncome : 0;

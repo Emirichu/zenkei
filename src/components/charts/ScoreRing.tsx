@@ -1,4 +1,4 @@
-/** The Coach tab's money-health ring: a 0–100 score drawn as a partial
+/** The Coach tab's money-health ring: a 0-100 score drawn as a partial
  * circle via stroke-dasharray, in the band color passed by the caller. */
 export default function ScoreRing({ score, color }: { score: number; color: string }) {
   const R = 54,

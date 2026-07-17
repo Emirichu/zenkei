@@ -1,6 +1,6 @@
 /* Screenshot import: on-device OCR via Tesseract.js. The library is
  * ~2MB of WASM, so it's loaded from a CDN only when the user actually
- * uploads a screenshot — it never touches the main bundle. */
+ * uploads a screenshot. It never touches the main bundle. */
 
 declare global {
   interface Window {

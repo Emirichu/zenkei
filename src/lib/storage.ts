@@ -27,6 +27,6 @@ export function saveLS(key: string, val: unknown): void {
     if (val == null) localStorage.removeItem(key);
     else localStorage.setItem(key, JSON.stringify(val));
   } catch {
-    /* storage full or blocked — losing auto-save is fine */
+    /* storage full or blocked, losing auto-save is fine */
   }
 }

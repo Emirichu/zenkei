@@ -5,14 +5,14 @@ import type { Subscription, SubFlag, Transaction } from "./types";
 /**
  * Find recurring charges with no merchant list and no hardcoding:
  *
- * 1. Group expenses by a normalized merchant key (rent is excluded —
+ * 1. Group expenses by a normalized merchant key (rent is excluded:
  *    it's recurring, but it isn't a "subscription").
  * 2. A group is a candidate only if it has 3+ charges whose amounts
  *    stay within ±25% of the median (subscriptions cost the same
  *    every time; coffee runs don't).
  * 3. The median gap between charges must land in a known cadence
  *    window (weekly / biweekly / monthly / quarterly / yearly), and
- *    most gaps must actually sit near that median — otherwise it's
+ *    most gaps must actually sit near that median, otherwise it's
  *    just a store you visit often.
  * 4. Flags are layered on top: price increases (latest charge > first
  *    by 8%+), overlapping streaming services, duplicate fitness
